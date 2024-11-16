@@ -23,7 +23,7 @@ async function onSubmit(event) {
 
   query = event.currentTarget.elements.input.value;
   if (query.trim() === '') {
-    iziToast.warning({
+    iziToast.error({
       title: 'Missing tags',
       message: 'Please enter a search query!',
       closeOnClick: true,
@@ -52,11 +52,11 @@ async function onSubmit(event) {
         loadMoreBtn.style.display = 'block';
       } else {
         loadMoreBtn.style.display = 'none';
-        iziToast.show({
-          class: 'toast',
+        iziToast.error({
           position: 'topRight',
-          messageColor: 'white',
           message: `We're sorry, but you've reached the end of search results.`,
+          timeout: 2500,
+          closeOnClick: true,
         });
       }
     }
@@ -79,7 +79,7 @@ async function onLoadMore() {
   try {
     const data = await fetchImages(query, page, per_page);
     renderImages(data.hits);
-    console.log(gallery.lastElementChild);
+    // console.log(gallery.lastElementChild);
 
     const cardRect = gallery.lastElementChild.getBoundingClientRect();
     window.scrollBy({
@@ -91,11 +91,11 @@ async function onLoadMore() {
       loadMoreBtn.style.display = 'block';
     } else {
       loadMoreBtn.style.display = 'none';
-      iziToast.show({
-        class: 'toast',
+      iziToast.error({
         position: 'topRight',
-        messageColor: 'white',
         message: `We are sorry, there are no more posts to load`,
+        timeout: 2500,
+      closeOnClick: true,
       });
     }
   } catch (error) {

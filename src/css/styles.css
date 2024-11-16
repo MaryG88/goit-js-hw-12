@@ -109,6 +109,7 @@ body {
 }
 
 .gallery-link {
+  display: block;
   text-decoration: none;
 }
 
@@ -131,7 +132,6 @@ body {
   display: block;
   width: 360px;
   height: 200px;
-  overflow: hidden;
   cursor: zoom-in;
   object-fit: cover;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -139,7 +139,6 @@ body {
 
 .gallery-img-info {
   display: flex;
-  /* flex-direction: center; */
   text-align: center;
   margin: 8px 0 8px 0;
   justify-content: center;
