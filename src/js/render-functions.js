@@ -23,11 +23,10 @@ function renderImages(images) {
 //     <a class="gallery-link" href="${largeImageURL}">
 //       <img class="gallery-img" src="${webformatURL}" alt="${tags}"  />
 //       <div class="gallery-img-info">
-//          <p class="info-item-title"><b>Likes</b>${likes}</p>
-//           <p class="info-item-title"><b>Views</b>${views}</p>
-//           <p class="info-item-title"><b>Comments</b>${comments}</p>
-//           <p class="info-item-title"><b>Downloads</b>${downloads}</p>
-         
+//          <p class="info-item-title"><strong>Likes</strong>${likes}</p>
+//           <p class="info-item-title"><strong>Views</strong>${views}</p>
+//           <p class="info-item-title"><strong>Comments</strong>${comments}</p>
+//           <p class="info-item-title"><strong>Downloads</strong>${downloads}</p>
 //         </div>
 //     </a>
 //   </li>`;
