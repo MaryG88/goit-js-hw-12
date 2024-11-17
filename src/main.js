@@ -31,7 +31,7 @@ async function onSubmit(event) {
     return;
   }
   page = 1;
-  loadMoreBtn.style.display = 'none';
+  loadMoreBtn.classList.replace('load-more-hidden', 'load-more');
   loaderContainer.style.display = 'block';
 
   try {

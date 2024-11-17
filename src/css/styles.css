@@ -31,6 +31,7 @@ body {
 }
 
 .loader {
+  display: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -178,4 +179,8 @@ body {
 
 .load-more-btn:hover {
 background-color: #3abff3;
+}
+
+.load-more-hidden {
+  display: none;
 }
